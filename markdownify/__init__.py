@@ -158,7 +158,7 @@ class MarkdownConverter(object):
         hashes = '#' * n
         if style == ATX_CLOSED:
             return '%s %s %s\n\n' % (hashes, text, hashes)
-        return '%s %s\n\n' % (hashes, text)
+        return '\n\n%s %s\n\n' % (hashes, text)
 
     def convert_i(self, el, text):
         return self.convert_em(el, text)
